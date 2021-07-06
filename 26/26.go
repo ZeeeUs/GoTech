@@ -4,7 +4,7 @@ import "fmt"
 
 func reverse(str string) string {
 	arr := []rune(str)
-	buf := []rune{}
+	var buf []rune
 	for i := len(str) - 1; i >= 0; i-- {
 		buf = append(buf, arr[i])
 	}
