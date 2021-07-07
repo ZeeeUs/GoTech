@@ -16,8 +16,12 @@ func customSleep2(i int) {
 
 func main() {
 	str := "Hello world"
-	//customSleep1(3)
+	fmt.Println(time.Now().Second())
+	customSleep1(3)
+	fmt.Println(str)
+	fmt.Println(time.Now().Second())
 	customSleep2(3)
 	fmt.Println(str)
+	fmt.Println(time.Now().Second())
 
 }

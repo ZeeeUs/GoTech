@@ -14,7 +14,7 @@ type sber struct {
 
 type city struct {}
 
-type cityAdapter struct {
+type currencyAdapter struct {
 	cityCard *city
 }
 
@@ -31,7 +31,7 @@ func (cit *city) pay(){
 	fmt.Println("Оплачиваем долларами")
 }
 
-func (a *cityAdapter) pay() {
+func (a *currencyAdapter) pay() {
 	fmt.Println("Конвертация валюты из рублей в доллары")
 	a.cityCard.pay()
 }
@@ -43,7 +43,7 @@ func main(){
 	client.payByCard(sber)
 
 	cityCard := &city{}
-	cityCardAdapter := &cityAdapter{
+	cityCardAdapter := &currencyAdapter{
 		cityCard: cityCard,
 	}
 
